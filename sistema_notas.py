@@ -69,7 +69,7 @@ class SistemaNotas:
             print("No hay notas disponibles.")
             return
         for i, nota in enumerate(self.notas):
-            print(f"{i + 1}. {nota}")  # Mostrar numeración a partir de 1
+            print(f"{i + 1}. {nota}")
             print("-" * 40)
 
     def guardar_notas(self):
@@ -110,7 +110,7 @@ def menu():
             nuevas_etiquetas = input("Nuevas etiquetas (separadas por comas): ").split(',')
             nuevas_etiquetas = [etiqueta.strip() for etiqueta in nuevas_etiquetas]
             try:
-                sistema.editar_nota(numero - 1, nuevo_contenido, nuevas_etiquetas)  # Convertir a índice
+                sistema.editar_nota(numero - 1, nuevo_contenido, nuevas_etiquetas)
             except IndexError as e:
                 print(e)
         
